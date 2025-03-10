@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.content-page {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-card-content {
+  flex-grow: 1;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.form-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 20px !important;
+}
+
+.page-header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.low-stock {
+  color: #f44336;
+}
+
+.overdue {
+  color: #f44336;
+}
+
+.text-success {
+  color: #4caf50;
+}
+
+.text-warning {
+  color: #ff9800;
+}
+
+.text-error {
+  color: #f44336;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.badge-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.badge-success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.badge-error {
+  background-color: #f44336;
+  color: white;
+}
+
+.badge-info {
+  background-color: #2196f3;
+  color: white;
+}
+
+.badge-default {
+  background-color: #757575;
+  color: white;
+}
+
+.file-input {
+  display: none;
+}
+
+.mobile-menu-button {
+  margin-right: 16px;
+}
+
+@media (min-width: 600px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
