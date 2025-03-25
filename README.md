@@ -71,6 +71,17 @@ DB_PORT=5432
 ALLOWED_HOSTS=localhost,127.0.0.1
 ```
 
+Voici comment renseigner chaque variable:
+
+- **DEBUG**: Mode débogage de Django. Réglez sur `True` pour le développement et `False` pour la production.
+- **SECRET_KEY**: Clé secrète utilisée par Django pour la sécurité. Générez une clé forte et unique (vous pouvez utiliser [ce générateur](https://djecrety.ir/) ou exécutez `python -c "import secrets; print(secrets.token_urlsafe(50))"` dans votre terminal).
+- **DB_NAME**: Nom de votre base de données PostgreSQL (utilisez `finance_db` comme indiqué dans l'étape précédente).
+- **DB_USER**: Nom d'utilisateur PostgreSQL avec accès à la base de données.
+- **DB_PASSWORD**: Mot de passe de l'utilisateur PostgreSQL.
+- **DB_HOST**: Hôte de la base de données (`localhost` pour le développement local).
+- **DB_PORT**: Port PostgreSQL standard (généralement `5432`).
+- **ALLOWED_HOSTS**: Liste des noms d'hôtes/domaines autorisés à servir votre application Django, séparés par des virgules.
+
 5. Appliquer les migrations et créer un superutilisateur:
 ```bash
 cd backend
