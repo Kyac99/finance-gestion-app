@@ -77,7 +77,22 @@ Voici comment renseigner chaque variable:
 - **SECRET_KEY**: Clé secrète utilisée par Django pour la sécurité. Générez une clé forte et unique (vous pouvez utiliser [ce générateur](https://djecrety.ir/) ou exécutez `python -c "import secrets; print(secrets.token_urlsafe(50))"` dans votre terminal).
 - **DB_NAME**: Nom de votre base de données PostgreSQL (utilisez `finance_db` comme indiqué dans l'étape précédente).
 - **DB_USER**: Nom d'utilisateur PostgreSQL avec accès à la base de données.
-- **DB_PASSWORD**: Mot de passe de l'utilisateur PostgreSQL.
+- **DB_PASSWORD**: Mot de passe de l'utilisateur PostgreSQL. Vous avez deux options :
+  - Utiliser un mot de passe PostgreSQL existant si vous avez déjà configuré un utilisateur
+  - Créer un nouvel utilisateur et mot de passe avec les commandes suivantes :
+    ```bash
+    # Se connecter à PostgreSQL
+    sudo -u postgres psql
+    
+    # Créer un nouvel utilisateur et définir son mot de passe
+    CREATE USER your_db_user WITH PASSWORD 'your-db-password';
+    
+    # Accorder les privilèges sur la base de données
+    GRANT ALL PRIVILEGES ON DATABASE finance_db TO your_db_user;
+    
+    # Quitter psql
+    \q
+    ```
 - **DB_HOST**: Hôte de la base de données (`localhost` pour le développement local).
 - **DB_PORT**: Port PostgreSQL standard (généralement `5432`).
 - **ALLOWED_HOSTS**: Liste des noms d'hôtes/domaines autorisés à servir votre application Django, séparés par des virgules.
